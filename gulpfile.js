@@ -16,7 +16,7 @@ var paths = {
 gulp.task('build-html', function () {
     gulp.src([paths.html, '!./src/app/layout/**/*.html', '!./src/app/components/**/*.html'])
         .pipe(swig())
-        .pipe(minifyHtml())
+        // .pipe(minifyHtml())
         .pipe(gulp.dest('./dist/'))
 });
 
