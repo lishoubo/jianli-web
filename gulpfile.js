@@ -26,6 +26,11 @@ gulp.task('build-css', function () {
         .pipe(gulp.dest('./dist/css'));
 });
 
+gulp.task('build-img', function () {
+    gulp.src([paths.img])
+        .pipe(gulp.dest('./dist/images/'));
+});
+
 gulp.task('webpack', function () {
     gulp.src(paths.js)
         .pipe(webpack(require('./webpack.config.js')))
@@ -46,4 +51,4 @@ gulp.task('watch', function () {
     gulp.watch('src/css/**/*.less', ['build-css']);
 });
 
-gulp.task('default', ['watch', 'build-html', 'webpack', 'build-css', 'server']);
+gulp.task('default', ['watch', 'build-html', 'webpack', 'build-css', 'build-img', 'server']);

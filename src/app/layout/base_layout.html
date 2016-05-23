@@ -10,8 +10,8 @@
     {% endblock %}
 </head>
 <body>
-<div class="headband"></div>
-<div class="container">
+{% include "../components/nav-bar.html" %}
+<div class="container-fluid">
     {% block content %}
     {% endblock %}
 </div>
