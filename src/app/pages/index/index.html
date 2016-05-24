@@ -5,5 +5,16 @@
 {% endblock %}
 
 {% block content %}
-<p>This is just an awesome page.</p>
+
+<div class="row">
+    <div class="col-md-12" style="padding: 0">
+        {% include "../../components/banner-carousel.html" %}
+    </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+{% parent %}
+<script src="/js/admin.page.js"/>
 {% endblock %}

@@ -8,14 +8,16 @@ var gulp = require('gulp'),
 var paths = {
     html: 'src/app/**/*.html',
     js: 'src/app/**/*.js',
-    css: 'src/css/*.less',
+    css: 'src/css/**/*.less',
     img: 'src/img/*'
 };
 
 
 gulp.task('build-html', function () {
-    gulp.src([paths.html, '!./src/app/layout/**/*.html', '!./src/app/components/**/*.html'])
-        .pipe(swig())
+    gulp.src([paths.html])
+        .pipe(swig({
+            defaults: {cache: false}
+        }))
         // .pipe(minifyHtml())
         .pipe(gulp.dest('./dist/'))
 });
