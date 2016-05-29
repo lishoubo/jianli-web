@@ -8,12 +8,13 @@
 
 {% include "../../components/quick-nav.html" %}
 
-<div id="banner-carousel" class="row">
+<div class="row" style="height: 323px;">
     <div class="col-md-12" style="padding: 0">
         {% include "../../components/banner-carousel.html" %}
     </div>
 </div>
-<div id="service-introduction" class="row">
+
+<div class="row" style="height: 546px; background-color: grey;padding-top: 110px;">
     <div class="col-md-5 col-md-offset-1">
         <article>
             <h5>
@@ -33,12 +34,50 @@
         </section>
     </div>
 </div>
-<div id="service-process" class="row">
+<div class="row" style="height: 546px; background-color: gainsboro;padding-top: 70px;">
     <div class="col-md-7 col-md-offset-5">
         <h5 style="color: white">监理服务流程</h5>
     </div>
     <div class="col-md-10 col-md-offset-2" style="margin-top: 20px">
         {% include "../../components/jl-process.html" %}
+    </div>
+</div>
+
+<div class="row" style="height: 760px; background-color: white; margin: 70px 0 0 0">
+    <div class="col-md-4 col-md-offset-4">
+        <div style="text-align: center;margin-bottom: 60px">
+            <div style="background-color: lavenderblush;margin-bottom: 20px">
+                <img src="/images/line-01.png" style="">
+                <img src="/images/icon-01.png" style="">
+                <h5 style="display:inline;top: 3px;position: relative;">监理案例</h5>
+                <img src="/images/line-01.png" style="">
+            </div>
+            <div>
+                <span>现场直播工地施工情况</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-11 col-md-offset-1">
+        {% include "../../components/jl-example.html" %}
+    </div>
+</div>
+
+<div class="row" style="height: 760px; background-color: white;margin: 70px 0 0 0">
+    <div class="col-md-4 col-md-offset-4">
+        <div style="text-align: center;margin-bottom: 60px">
+            <div style="background-color: lavenderblush;margin-bottom: 20px">
+                <img src="/images/line-01.png" style="">
+                <img src="/images/icon-01.png" style="">
+                <h5 style="display:inline;top: 3px;position: relative;">家装百科</h5>
+                <img src="/images/line-01.png" style="">
+            </div>
+            <div>
+                <span>崔工教你不同阶段装修注意事项</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-11 col-md-offset-1">
+        {% include "../../components/jl-baike.html" %}
     </div>
 </div>
 
