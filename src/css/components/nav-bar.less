@@ -1,10 +1,11 @@
 .header {
-  background: #333333;
+  background: #000;
   height: 50px;
 }
 
 .navbar {
   padding: 0;
+  margin-left: 60px;
 }
 
 .navbar ul {
@@ -12,7 +13,7 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #000;
 }
 
 .navbar li {
@@ -23,14 +24,32 @@
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 20px;
   text-decoration: none;
 }
 
 .navbar a:hover:not(.active) {
-  background-color: #111;
 }
 
 .navbar .active {
-  background-color: #4CAF50;
+  border-bottom: 2px ghostwhite solid;
+}
+
+.logo {
+  height: 50px;
+  padding-top: 14px;
+}
+
+.logo img {
+  width: 83px;
+  height: 20px;
+}
+
+.login {
+  height: 50px;
+  padding-top: 15px;
+}
+
+.login a {
+  color: white;
 }
