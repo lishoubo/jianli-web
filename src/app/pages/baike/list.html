@@ -1,0 +1,93 @@
+{% extends '../../layout/base_layout.html' %}
+{% block head %}
+{% parent %}
+<link href="/css/baike.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+<div class="row" style="margin: 20px 50px">
+    <div class="col-md-9">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="horizontal-list jl-baike-category-list">
+                    <ul>
+                        <li class="active">
+                            <div>
+                                <img src="/images/icon-baike-01.png"/>
+                                <p>所有分类</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="/images/icon-baike-02.png"/>
+                                <p>前期准备</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="/images/icon-baike-01.png"/>
+                                <p>方案设计</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="/images/icon-baike-01.png"/>
+                                <p>建筑采纳</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="/images/icon-baike-01.png"/>
+                                <p>硬装施工</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="/images/icon-baike-01.png"/>
+                                <p>软装配饰</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="/images/icon-baike-01.png"/>
+                                <p>工程验收</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jl-baike-category-filter">
+                    <label>排序: 按时间排序</label>
+                    <label>类型: 所有类型</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <p>热门百科</p>
+        <ul>
+            <li>2015年装修五大流行趋势</li>
+            <li>一张图带你了解装修</li>
+            <li>品味小清新美居</li>
+            <li>复古美苑心中理想之家</li>
+            <li>欧式混搭现代风格美家</li>
+        </ul>
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block footer %}
+{% parent %}
+<script src="/js/admin.baike.js"/>
+{% endblock %}

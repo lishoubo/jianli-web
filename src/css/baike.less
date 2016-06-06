@@ -1,0 +1,53 @@
+@import "components/common";
+@import "components/nav-bar";
+
+/*百科list页面头部导航*/
+.jl-baike-category-list li {
+  background-color: lightgray;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  padding: 10px;
+  margin: 8px 5px;
+  position: relative;
+}
+
+.jl-baike-category-list li img {
+  width: 35px;
+  height: 35px;
+}
+
+.jl-baike-category-list li > div p {
+  font-size: small;
+  margin-top: 10px;
+}
+
+.jl-baike-category-list .active {
+  background-color: grey;
+}
+
+.jl-baike-category-list .active:after {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid grey;
+  display: block;
+  position: absolute;
+  content: '';
+  left: 50%;
+  top: 100%;
+  margin-left: -8px;
+}
+
+.jl-baike-category-list li:first-child {
+  margin-left: 0px;
+}
+
+/*百科list页面筛选项*/
+.jl-baike-category-filter {
+  margin: 10px 0px;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  padding: 10px 20px;
+}
