@@ -1,26 +1,40 @@
 #quick_nav {
   position: fixed;
-  left: 8px;
+  left: 5px;
   top: 160px;
   z-index: 100;
 }
-
-#quick_nav img {
-  width: 15px;
-  height: 15px;
-}
-
 
 #quick_nav li {
   padding: 5px;
 }
 
-#quick_nav .img-outer {
-  width:26px;
-  height:26px;
-  border-radius:13px;
-  border: 1px solid #333;
-  background-color: white;
-  text-align:center;
-  padding-top: 2px;
+#quick_nav div {
+  width: 28px;
+  height: 28px;
+  text-align: center;
+}
+
+#quick_nav .qq .icon {
+  width: 28px;
+  height: 28px;
+}
+
+#quick_nav .weixin .icon {
+  width: 24px;
+  height: 24px;
+}
+
+#quick_nav .weixin:hover .full-content {
+  visibility: visible;
+}
+
+#quick_nav .weixin {
+  position: relative;
+}
+
+#quick_nav .weixin .full-content {
+  position: absolute;
+  top: -30px;
+  left: 50px;
 }
