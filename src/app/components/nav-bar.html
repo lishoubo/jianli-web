@@ -15,12 +15,6 @@
             </ul>
         </div>
     </div>
-    <div class="col-md-2 col-md-offset-1">
-        <div class="login">
-            <a href="#">登录</a>
-        </div>
-    </div>
-
 </div>
 
 <script>
@@ -47,9 +41,7 @@
         });
 
         var url = window.location;
-        var element = $('.navbar a').filter(function () {
-            console.log(this.href);
-            console.log(url);
+        $('.navbar a').filter(function () {
             return this.href == url || url.href.indexOf(this.href) == 0;
         }).addClass('active');
     })
