@@ -11,9 +11,11 @@ $(function () {
         data: {
             applyNum: 0,
             applyForm: {
-                district: '西湖区',
                 area: '',
-                address: '',
+                address: {
+                    district: '西湖区',
+                    location: ''
+                },
                 userName: '',
                 mobile: ''
             }
@@ -23,9 +25,23 @@ $(function () {
         },
         methods: {
             fetch_join_number: function () {
-                this.applyNum = 11223;
+                var owner = this;
+                this._get("/api/server/charge/count", "",
+                    function (result) {
+                        if(result.success) {
+                            owner.applyNum = result.data;
+                            return
+                        }
+                        console.log(result);
+                        owner.applyNum = "许多";
+                    }, function (error) {
+                        console.log(error);
+                        owner.applyNum = "许多";
+                    }
+                )
             },
             quick_join: function () {
+                var owner = this;
                 if (!this.applyForm.userName) {
                     show_tip("麻烦填写您的姓名,方便我们联系到您");
                     return;
@@ -34,11 +50,29 @@ $(function () {
                     show_tip("麻烦填写您的联系方式,方便我们联系到您");
                     return;
                 }
-                console.log(this.applyForm);
-                show_tip("恭喜您,预约成功,我们会马上联系您~");
+                this._post("/api/server/charge", this.applyForm,
+                    function (result) {
+                        if(result.success) {
+                            show_tip("恭喜您,预约成功,我们会马上联系您~");
+                            owner.fetch_join_number();
+                            owner.resetForm();
+                            return
+                        }
+                        show_tip("服务出错,请联系我们的客服~");
+                    },
+                    function (error) {
+                        console.log(error);
+                        show_tip("服务出错,请联系我们的客服~");
+                    });
             },
             choose_district: function (event) {
                 this.applyForm.district = $(event.target).html();
+            },
+            resetForm: function () {
+                this.applyForm.area = '';
+                this.applyForm.address = '';
+                this.applyForm.userName = '';
+                this.applyForm.mobile = '';
             }
 
         }

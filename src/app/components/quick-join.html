@@ -6,10 +6,10 @@
         <p><span>已有<span class="big">{% raw %}{{applyNum}}{% endraw %}</span>位用户报名</span></p>
         <input type="text" class="form-control quick-join-item" v-model="applyForm.area" placeholder="房屋面积(平方米)">
         <div class="input-group quick-join-item">
-            <input type="text" class="form-control" v-model="applyForm.address" placeholder="小区地址">
+            <input type="text" class="form-control" v-model="applyForm.address.location" placeholder="小区地址">
             <div class="input-group-btn">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">{% raw %}{{applyForm.district}}{% endraw %} <span
+                        aria-haspopup="true" aria-expanded="false">{% raw %}{{applyForm.address.district}}{% endraw %} <span
                         class="caret"></span></button>
                 <ul class="dropdown-menu dropdown-menu-right">
                     <li><p v-on:click="choose_district">余杭区</p></li>
