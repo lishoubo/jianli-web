@@ -8,6 +8,40 @@
 @import "components/jl-team";
 @import "components/footer";
 
+@media (min-device-width: 544px) {
+  .jl-service-intro {
+    padding-top: 60px;
+    height: 500px;
+  }
+  .i-title {
+    font-size: 24px;
+  }
+  .i-title span{
+    font-size: 28px;
+  }
+  .jl-service-intro-img {
+    display: block;
+  }
+
+}
+
+@media (max-device-width: 544px) {
+  .jl-service-intro-img {
+    display: none;
+  }
+  .jl-service-intro {
+    padding-top: 10px;
+    height: 400px;
+  }
+  .i-title {
+    font-size: 18px;
+  }
+  .i-title span{
+    font-size: 24px;
+  }
+
+}
+
 .jl-service-intro article p {
   font-size: 14px;
   line-height: 24px;
@@ -18,7 +52,7 @@
 
 .i-title {
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 18px;
   color: #9b9b9b;
   line-height: 50px;
   vertical-align: top;
@@ -29,5 +63,5 @@
 .i-title span {
   font-family: arial;
   color: #ffa751;
-  font-size: 28px;
+  font-size: 24px;
 }
