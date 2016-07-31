@@ -28,7 +28,7 @@ $(function () {
                 var owner = this;
                 this._get("/api/server/charge/count", "",
                     function (result) {
-                        if(result.success) {
+                        if (result.success) {
                             owner.applyNum = result.data;
                             return
                         }
@@ -52,7 +52,7 @@ $(function () {
                 }
                 this._post("/api/server/charge", this.applyForm,
                     function (result) {
-                        if(result.success) {
+                        if (result.success) {
                             show_tip("恭喜您,预约成功,我们会马上联系您~");
                             owner.fetch_join_number();
                             owner.resetForm();
@@ -77,4 +77,33 @@ $(function () {
 
         }
     });
+
+    /* 监理日志 */
+    new Vue({
+        el: '#jl-example',
+        data: {
+            applyNum: 0,
+            items: []
+        },
+        created: function () {
+            this.fetch_items();
+        },
+        methods: {
+            fetch_items: function () {
+                var owner = this;
+                this._get("/api/server/journal", {page: 1, pageSize: 10},
+                    function (result) {
+                        console.log(result);
+                        if (result.success) {
+                            owner.items = result.data.items;
+                            console.log(owner.items)
+                            return
+                        }
+                    }, function (error) {
+                        console.log(error);
+                    }
+                )
+            }
+        }
+    })
 });

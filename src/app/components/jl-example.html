@@ -1,131 +1,20 @@
-<div class="jl-example">
+<div class="jl-example" id="jl-example">
     <ul>
-        <li>
+        <li v-for="item in items">
             <div class="jl-example-item">
-                <img src="/images/u412.png"/>
+                <img src="{% raw %}{{item.cover}}{% endraw %}"/>
                 <div class="jl-engineer-container">
-                    <img class="jl-engineer-pic" src="/images/user-logo.jpg"/>
+                    <img class="jl-engineer-pic" src="{% raw %}{{item.staff.photo}}{% endraw %}"/>
                     <p>
-                        <span style="font-size: 90%">王建国</span>
+                        <span style="font-size: 90%">{% raw %}{{item.staff.name}}{% endraw %}</span>
                     </p>
                 </div>
                 <div class="jl-client-house">
-                    <span>西湖区</span>
+                    <span>{% raw %}{{item.building.address.district}}{% endraw %}</span>
                     <span>117平凡</span>
                     <span>3居室</span>
                 </div>
             </div>
         </li>
-        <li>
-            <div class="jl-example-item">
-                <img src="/images/u414.png"/>
-                <div class="jl-engineer-container">
-                    <img class="jl-engineer-pic" src="/images/user-logo.jpg"/>
-                    <p>
-                        <span style="font-size: 90%">王建国</span>
-                    </p>
-                </div>
-                <div class="jl-client-house">
-                    <span>西湖区</span>
-                    <span>117平凡</span>
-                    <span>3居室</span>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="jl-example-item">
-                <img src="/images/u418.png"/>
-                <div class="jl-engineer-container">
-                    <img class="jl-engineer-pic" src="/images/user-logo.jpg"/>
-                    <p>
-                        <span style="font-size: 90%">王建国</span>
-                    </p>
-                </div>
-                <div class="jl-client-house">
-                    <span>西湖区</span>
-                    <span>117平凡</span>
-                    <span>3居室</span>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="jl-example-item">
-                <img src="/images/u420.png"/>
-                <div class="jl-engineer-container">
-                    <img class="jl-engineer-pic" src="/images/user-logo.jpg"/>
-                    <p>
-                        <span style="font-size: 90%">王建国</span>
-                    </p>
-                </div>
-                <div class="jl-client-house">
-                    <span>西湖区</span>
-                    <span>117平凡</span>
-                    <span>3居室</span>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="jl-example-item">
-                <img src="/images/u424.png"/>
-                <div class="jl-engineer-container">
-                    <img class="jl-engineer-pic" src="/images/user-logo.jpg"/>
-                    <p>
-                        <span style="font-size: 90%">王建国</span>
-                    </p>
-                </div>
-                <div class="jl-client-house">
-                    <span>西湖区</span>
-                    <span>117平凡</span>
-                    <span>3居室</span>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="jl-example-item">
-                <img src="/images/u426.png"/>
-                <div class="jl-engineer-container">
-                    <img class="jl-engineer-pic" src="/images/user-logo.jpg"/>
-                    <p>
-                        <span style="font-size: 90%">王建国</span>
-                    </p>
-                </div>
-                <div class="jl-client-house">
-                    <span>西湖区</span>
-                    <span>117平凡</span>
-                    <span>3居室</span>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="jl-example-item">
-                <img src="/images/u430.png"/>
-                <div class="jl-engineer-container">
-                    <img class="jl-engineer-pic" src="/images/user-logo.jpg"/>
-                    <p>
-                        <span style="font-size: 90%">王建国</span>
-                    </p>
-                </div>
-                <div class="jl-client-house">
-                    <span>西湖区</span>
-                    <span>117平凡</span>
-                    <span>3居室</span>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="jl-example-item">
-                <img src="/images/u432.png"/>
-                <div class="jl-engineer-container">
-                    <img class="jl-engineer-pic" src="/images/user-logo.jpg"/>
-                    <p>
-                        <span style="font-size: 90%">王建国</span>
-                    </p>
-                </div>
-                <div class="jl-client-house">
-                    <span>西湖区</span>
-                    <span>117平凡</span>
-                    <span>3居室</span>
-                </div>
-            </div>
-        </li>
+
 </div>

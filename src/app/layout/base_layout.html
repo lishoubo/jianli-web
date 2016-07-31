@@ -26,7 +26,8 @@
     Vue.mixin({
         methods: {
             _api_host: function () {
-                return "http://localhost:8080";
+//                return "http://localhost:8080";
+                return "";
             },
             _post: function (api, data, success_callback, error_callback) {
                 var self = this;
