@@ -5,14 +5,10 @@
 @import "components/quick-nav";
 @import "components/jl-process";
 @import "components/jl-journal";
+@import "components/jl-map";
 @import "components/footer";
 
 @media (min-device-width: 544px) {
-  .jl-service-intro {
-    padding-top: 60px;
-    height: 500px;
-  }
-
   .i-title {
     font-size: 24px;
   }
@@ -32,11 +28,6 @@
     display: none;
   }
 
-  .jl-service-intro {
-    padding-top: 10px;
-    height: 400px;
-  }
-
   .i-title {
     font-size: 18px;
   }
@@ -44,7 +35,25 @@
   .i-title span {
     font-size: 24px;
   }
+}
 
+/* 每个模块的title*/
+.i-title {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #3f8c7f;
+  line-height: 50px;
+  vertical-align: top;
+  margin: 10px 0 16px;
+}
+
+.i-title span {
+  font-family: arial;
+  font-size: 18px;
+}
+
+.i-title i {
+  margin: 8px;
 }
 
 .jl-service-intro article p {
@@ -55,34 +64,22 @@
   text-indent: 2em;
 }
 
-.i-title {
-  text-transform: uppercase;
-  font-size: 16px;
-  color: #3f8c7f;
-  line-height: 50px;
-  vertical-align: top;
+.jl-service-intro .i-title {
   border-bottom: 1px solid #dbdbdb;
-  margin: 20px 0 16px;
-}
-
-.i-title span {
-  font-family: arial;
-  color: #3f8c7f;
-  font-size: 18px;
-}
-
-.i-title i, .jl-process-title i, .jl-journal-title i {
-  margin: 5px;
 }
 
 .jl-process-title {
-  font-family: arial;
   color: #dae5e2;
-  font-size: 18px;
 }
 
 .jl-journal-title {
-  font-family: arial;
   color: #3f8c7f;
-  font-size: 18px;
+}
+
+.jl-about-us {
+  color: white;
+}
+
+.jl-about-us span {
+  font-size: 16px;
 }
