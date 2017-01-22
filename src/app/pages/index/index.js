@@ -133,7 +133,7 @@ function createMap() {
 function setMapEvent() {
     map.disableDragging();//禁用地图拖拽事件
     map.disableScrollWheelZoom();//禁用地图滚轮放大缩小，默认禁用(可不写)
-    map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+    map.disableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
     map.disableKeyboard();//禁用键盘上下左右键移动地图，默认禁用(可不写)
 }
 
