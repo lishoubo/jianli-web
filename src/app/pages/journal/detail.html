@@ -1,7 +1,7 @@
 {% extends '../../layout/base_layout.html' %}
 {% block head %}
 {% parent %}
-<link href="//cdn.bootcss.com/bootstrap-datepicker/1.6.1/css/bootstrap-datepicker.min.css" rel="stylesheet">
+<link href="http://cdn.bootcss.com/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker3.min.css" rel="stylesheet">
 <link href="/css/journal-detail.css" rel="stylesheet">
 {% endblock %}
 
@@ -242,9 +242,9 @@
         </div>
         <div class="col-md-3 datepicker-container">
             <div class="datepicker-header">
-                <h6>监理巡查日记</h6>
+                <h4>日历</h4>
             </div>
-            <div class="datepicker datepicker-inline">
+            <div id="journal-detail-datepicker" class="datepicker datepicker-inline">
             </div>
 
         </div>
